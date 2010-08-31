@@ -1,0 +1,44 @@
+#br_body h1 {
+	font-family: "Hiragino Mincho Pro","ヒラギノ明朝 Pro W3";
+	margin:0; padding:0; width:auto; overflow:hidden; color:#000000; text-align:left;
+}
+#br_body h2 {
+	font-family: "Hiragino Mincho Pro","ヒラギノ明朝 Pro W3";
+	margin:0; padding:0; width:auto; overflow:hidden; color:#000000; text-align:left;
+}
+#br_body h3 {
+	font-family: "Hiragino Mincho Pro","ヒラギノ明朝 Pro W3";
+	margin:0; padding:0; width:auto; overflow:hidden; color:#000000; text-align:left;
+}
+#br_body p {
+	font-family: "Hiragino Mincho Pro","ヒラギノ明朝 Pro W3";
+	margin:0; padding:0; width:auto; overflow:hidden; color:#000000; text-align:left;
+}
+#br_body strong {
+	font-family: "Hiragino Mincho Pro","ヒラギノ明朝 Pro W3";
+}
+#br_body p.caption {
+	font-family: "Hiragino Kaku Gothic Pro","ヒラギノ角ゴ Pro W3";
+	font-size:12px; height:22px; line-height: 22px;
+}
+#br_body img {
+	margin-left: 0;
+}
+
+/*L*/
+#br_body h1.L { font-size:32px; height:87px; line-height: 87px; }
+#br_body h2.L { font-size:24px; height:58px; line-height: 58px; }
+#br_body h3.L { font-size:20px; height:29px; line-height: 29px; }
+#br_body p.L  { font-size:18px; height:29px; line-height: 29px; }
+
+/*M*/
+#br_body h1.M { font-size:28px; height:69px; line-height: 69px; }
+#br_body h2.M { font-size:21px; height:46px; line-height: 46px; }
+#br_body h3.M { font-size:16px; height:23px; line-height: 23px; }
+#br_body p.M  { font-size:14px; height:23px; line-height: 23px; }
+
+/*S*/
+#br_body h1.S { font-size:24px; height:66px; line-height: 66px; }
+#br_body h2.S { font-size:18px; height:44px; line-height: 44px; }
+#br_body h3.S { font-size:14px; height:22px; line-height: 22px; }
+#br_body p.S  { font-size:12px; height:22px; line-height: 22px; }

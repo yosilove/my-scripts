@@ -1,0 +1,177 @@
+@chaerset "shift_jis";
+
+/*
+----------------------------------------------------------------------------
+	[update: 08/12/28]
+----------------------------------------------------------------------------
+*/
+
+
+/*
+==============================
+				normal selecter
+==============================
+*/
+	body {
+		color: #336;
+		font-size: 12px;
+	}
+	
+	a {
+		color: #142ffc;
+	}
+
+	a:hover {
+		color: #ff9b0c;
+	}
+	
+	h1 {
+		color: #fff;
+		font-size: 130%;
+	}
+	
+	h2 {
+		border-bottom: solid 1px #ccc;
+		clear: both;
+		font-size: 110%;
+		margin-bottom: 10px;
+	}
+
+	th {
+		text-align: right;
+		padding: 7px;
+	}
+	
+	td {
+		padding-right: 7px;
+	}
+
+/*
+==============================
+				class selecter
+==============================
+*/
+	.btn {
+		border: solid 1px #000;
+		float: left;
+		display: block;
+		text-decoration: none;
+		text-align: center;
+		margin-right: 10px;
+		width: 50px;
+	}
+
+	.supLine {
+		border: dashed 1px #ccc;
+	}
+
+	.floatLeft {
+		float: left;
+	}
+	
+	.floatRight {
+		float: right;
+	}
+
+	.clearFix {
+		zoom: 1;
+	}
+		.clearFix:after {
+			content: '.';
+			clear: both;
+			display: block;
+			height: 0;
+			visibility: hidden;
+		}
+
+	.download {
+		margin: 20px 0;
+	}
+
+	.para {
+		margin-bottom: 1.2em;
+	}
+
+	.demo {
+		border-left: solid 5px #8af;
+		border-bottom: solid 1px #8af;
+		padding: 2px 5px;
+		margin-bottom: 10px;
+	}
+	
+	.demoList {
+		/* null */
+	}
+		.demoList li {
+			background-color: #cef;
+			border: solid 3px #69f;
+			padding: 3px;
+			margin-bottom: 5px;
+			width: 50%;
+		}
+			.demoList li a {
+				display: block;
+				text-decoration: none;
+			}
+			
+	.optionList {
+		border-collapse: collapse;
+		border: solid 2px #69f;
+		width: 100%;
+	}
+		.optionList th {
+			background-color: #cef;
+			font-weight: bold;
+			text-align: center;
+		}
+		
+		.optionList td {
+			border: dotted 1px #69f;
+			padding: 5px;
+		}
+		
+		.optionList th {
+			border: solid 1px #69f;
+			padding: 5px;
+		}
+		
+		.optionList .even td ,
+		.optionList .odd td {
+			border-bottom: solid 2px #69f;
+		}
+
+/*
+==============================
+				container
+==============================
+*/
+	#wrap {
+		padding: 20px;
+		width: 1000px;
+	}
+	
+	#wrap > h2:first-child {
+		padding-top: 0;
+	}
+
+	#header {
+		background: url(http://css-eblog.com/eblog_sample/0712/19/bg_header.gif) left top repeat-x;
+		padding: 20px 20px 0;
+		height: 69px;
+		_height: 89px; /* for IE6 */
+	}
+		#header p {
+			text-align: right;
+		}
+		
+		#header a {
+			color: #fff;
+		}
+		
+		#header a:hover {
+			text-decoration: none;
+		}
+
+	#read {
+		margin-bottom: 15px;
+	}

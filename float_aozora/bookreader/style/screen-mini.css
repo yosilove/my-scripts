@@ -1,0 +1,42 @@
+body {
+	margin:50px 0 0;
+	padding:0;
+	background-color: #F2F2F2;
+	background-image: url("../library/bookreader/themes/mini/background.gif");
+	background-repeat: repeat-y;
+	font-family: "Hiragino Mincho Pro","メイリオ","Meiryo";
+}
+div#header {
+	position: absolute;
+	width:100%; height:50px; top:0; left:0;
+	overflow: hidden;
+}
+div#header div {
+	position: absolute;
+	font-size:16px; font-weight: normal;
+	top: 0px; left:25px; padding:0; width:801px; height:50px;
+	line-height: 50px;
+	text-indent: 10px;
+	border-top: 6px solid #336699;
+}
+div#footer {
+	font-size:10px; font-weight: normal;
+	margin: 0 0 0 26px;
+	padding: 18px 10px 7px;
+}
+div#footer_for_print { display:none; }
+
+/* When Bookreader is not available or tunred off, styles below are used.  */
+#bookreader {
+	border-top:1px solid #D6D6D6;
+	border-bottom:1px solid #D6D6D6;
+}
+#bookreader h1 { margin-left:45px; width:960px; font-size:24px; }
+#bookreader h2 { margin-left:45px; width:960px; font-size:18px; }
+#bookreader h3 { margin-left:45px; width:960px; font-size:14px; }
+#bookreader p { margin-left:45px; width:960px; font-size:12px; }
+#bookreader div { margin-left:45px; width:960px; font-size:12px; }
+#bookreader hr { margin-left:45px; width:960px; }
+#bookreader img { margin-left:45px; }
+#bookreader p img { margin-left:0; }
+#bookreader div hr { margin-left:0; }

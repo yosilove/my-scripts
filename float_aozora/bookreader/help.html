@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja">
+
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="library/prototype/prototype.js"></script>
+<script type="text/javascript" src="library/scriptaculous/effects.js"></script>
+<script type="text/javascript" src="library/cookiemanager/cookiemanager.js"></script>
+<script type="text/javascript" src="library/bookreader/bookreader.js"></script>
+<link rel="stylesheet" type="text/css" href="style/print.css" media="print" />
+<link rel="stylesheet" type="text/css" href="style/screen.css" media="screen" />
+<title>ヘルプ</title>
+</head>
+
+<body>
+
+<div id="header">
+<div>bookreader.js</div>
+</div>
+
+<div id="bookreader">
+<h1>ヘルプ</h1>
+<p>このサイトは<a href="http://bookreader.cognitom.com/">bookreader.js</a>を使用しています。JavaScript対応環境であれば、ページめくりの要領でテキストを横スクロールできます。</p>
+<h2>閲覧方法</h2>
+<p>次ページに進むには、右側ページの▶ボタンをクリックするか、キーボードの右矢印ボタンを押します。前ページに戻るには、左側ページの◀ボタンをクリックするか、キーボードの右矢印ボタンを押します。詳しくは、下記のショートカット一覧を見て下さい。</p>
+<h2>キーショートカット一覧</h2>
+<p>[→] : 次ページ</p>
+<p>[←] : 前ページ</p>
+<p>[↓] : 次々ページ</p>
+<p>[↑] : 前々ページ</p>
+<p>[home] : 最初のページ</p>
+<p>[end] : 最後のページ</p>
+<h2>フォントサイズの変更</h2>
+<p>フォントのサイズは <a href="#" onclick="BookReader.changeFontSize('S'); return false;">小</a>・<a href="#" onclick="BookReader.changeFontSize('M'); return false;">中</a>・<a href="#" onclick="BookReader.changeFontSize('L'); return false;">大</a> から選べます。</p>
+</div>
+
+<div id="footer">
+Powered by <a href="http://bookreader.cognitom.com/">bookreader.js</a> |
+フォントサイズ:
+<a href="#" onclick="BookReader.changeFontSize('S'); return false;">小</a> /
+<a href="#" onclick="BookReader.changeFontSize('M'); return false;">中</a> /
+<a href="#" onclick="BookReader.changeFontSize('L'); return false;">大</a> | 
+bookreader:
+<a href="#" onclick="BookReader.activate(); return false;">オン</a> / 
+<a href="#" onclick="BookReader.deactivate(); return false;">オフ</a> |
+<a href="help.html">ヘルプ</a>
+</div>
+
+<div id="footer_for_print">
+bookreader.cognitom.com
+</div>
+
+</body>
+
+</html>

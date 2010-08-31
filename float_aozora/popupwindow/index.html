@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="content-script-type" content="text/javascript" />
+	<title>[DEMO] フローティングポップアップウィンドウ</title>
+	<link rel="stylesheet" href="http://css-eblog.com/eblog_sample/css/base.css" type="text/css" />
+	<link rel="stylesheet" href="http://css-eblog.com/eblog_sample/css/sample_layout.css" type="text/css" />
+	<link rel="stylesheet" href="css/popupwindow.css" type="text/css" media="all" />
+	<script type="text/javascript" src="jquery-1.2.6.min.js"></script>
+	<script type="text/javascript" src="popupwindow-1.8.1.js"></script>
+</head>
+
+<body>
+<div id="header">
+	<h1>フローティングポップアップウィンドウ</h1>
+	<p><a href="http://css-eblog.com/" title="CSS-EBLOGへ">CSS-EBLOGへ戻る</a></p>
+<!-- /#header --></div>
+
+<div id="wrap" class="clearFix">
+	<div id="read">
+		<h2>フローティングポップアップウィンドウ</h2>
+		<p class="para">
+			フローティングポップアップウィンドウを表示するスクリプトを作ってみました。<br />
+			「はい」や「いいえ」などを押したときに色々と処理をさせたかったので自作しました。<br />
+			Javascriptの「alert」関数を使うとどうしても味気ないものになってしまうので、<br />
+			デザインされたalertやconfirmを使いたい場合に使ってみてください。
+		</p>
+		<p class="para">
+			IE6 で、セレクトボックスの下にウィンドウが隠れてしまう問題を修正しました。<br />
+			下のセレクトボックスに重ねてみてください。セレクトボックスがしっかりとウィンドウの下に隠れるのが分かると思います。<br />
+			<select><option>test</option>
+		</select>
+		<p class="para">
+			また、表示できる内容はテキスト、DOMノード、iframe、画像となっています。<br />
+			最大化・最小化ボタンをつけたり、閉じるボタンを非表示にしたり、<br />
+			また、複数のウィンドウを開かせないようにモーダルとしてウィンドウを開くこともできます。
+		</p>
+
+		<p class="para">
+			そしてこれらの機能はすべて、同時に設定することができます。<br />
+			設定できるパラメータについてはサンプルの下に一覧表示しています。
+		</p>
+	<!-- /#read --></div>
+	<div id="sample">
+		<h3 class="demo">デモ</h3>
+		<ul class="demoList">
+			<li><a href="javascript:;" onclick="new $pop( 'アラートテストです。', { type: 'alert', title: 'アラートテスト', width: 500, height: 250} );">500x250のアラートボックスを表示</a></li>
+			<li><a href="javascript:;" onclick="new $pop( 'アラートテストです。', { type: 'information', title: 'アラートテスト', width: 500, height: 250} );">Informationボックスを表示</a></li>
+			<li><a href="javascript:;" onclick="new $pop( 'アラートテストです。', { type: 'caution', title: 'アラートテスト', width: 500, height: 250} );">Cautionボックスを表示</a></li>
+			<li><a href="javascript:;" onclick="new $pop( 'アラートテストです。', { type: 'warning', title: 'アラートテスト', width: 500, height: 250} );">Warningボックスを表示</a></li>
+			<li><a href="javascript:;" onclick="new $pop( 'アラートテストです。', { type: 'alert', title: 'アラートテスト', YES: function(){alert('「はい」ボタンを押しました。');} } );">「はい」ボタンに処理をつける</a></li>
+			<li><a href="javascript:;" onclick="new $pop( 'モーダルアラートテストです。', { type: 'alert', title: 'モーダルアラートテスト', modal: true } );">モーダルアラートを表示</a></li>
+			<li><a href="javascript:;" onclick="new $pop( 'ドラッグ処理オフテストです。', { type: 'alert', title: 'ドラッグ処理オフテスト', nomove: true } );">ポップアップウィンドウのドラッグ処理をさせないように表示</a></li>
+			<li><a href="javascript:;" onclick="new $pop( 'アニメーションアラートテストです。', { type: 'alert', title: 'アニメーションアラートテスト',effect: 'normal' } );">アニメーションアラートテストを表示</a></li>
+			<li><a href="javascript:;" onclick="new $pop( 'Confirmテストです。', { type: 'confirm', title: 'Confirmテスト', YES: function(){alert('「はい」ボタンを押しました。');},NO: function(){alert('「いいえ」ボタンを押しました。');} } );">「はい」「いいえ」ボタンに処理をつける</a></li>
+			<li><a href="javascript:;" onclick="new $pop( '閉じるボタンオフテストです。', { type: 'confirm', title: '閉じるボタンオフテスト', close:false } );">閉じるボタンを消す</a></li>
+			<li><a href="http://css-eblog.com" onclick="new $pop( this.href, { type: 'iframe', title: 'Iframeテスト', width: 500, height: 200 } ); return false;">iframeを表示</a></li>
+			<li><a href="http://css-eblog.com" onclick="new $pop( this.href, { type: 'iframe', title: '最小化・最大化テスト', width: 500, height: 200,windowmode:true } ); return false;">最小化・最大化機能をつけてを表示</a></li>
+			<li><a href="http://css-eblog.com" onclick="new $pop( this.href, { type: 'iframe', title: '最小化・最大化テスト', width: 500, height: 200,windowmode:true, resize: true } ); return false;">リサイズ可能なボックスを表示</a></li>
+			<li>
+				<a href="javascript:;" onclick="new $pop( 'copyBox', { type: 'inline', title: 'DOMコピーテスト' } ); return false;">DOMをコピーして表示↓</a>
+				<div id="copyBox" style="width: 200px; height: 150px; background: #ccc; padding: 15px; line-height: 150px; text-align: center;">コピーボックス</div>
+			</li>
+		</ul>
+	<!-- /#sample --></div>
+<!-- /#wrap --></div>
+</body>
+</html>

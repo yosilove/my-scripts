@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="content-script-type" content="text/javascript" />
+	<title>フローティングポップアップウィンドウ+bookreaderのテスト</title>
+	<link rel="stylesheet" href="popupwindow/css/sample_layout.css" type="text/css" />
+	<link rel="stylesheet" href="popupwindow/css/popupwindow.css" type="text/css" media="all" />
+	<script type="text/javascript" src="popupwindow/jquery-1.2.6.min.js"></script>
+	<script type="text/javascript" src="popupwindow/popupwindow-1.8.1.js"></script>
+</head>
+<body>
+
+<a href="bookreader/aozora.html?url=http://www.aozora.gr.jp/cards/000129/files/691_15352.html"
+ onclick="new $pop( this.href, { type: 'iframe', title: 'Iframeテスト', width: 900, height: 600 ,resize: true} );
+ return false;">
+高瀬舟
+</a>
+
+</body>
+</html>
