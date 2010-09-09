@@ -24,8 +24,7 @@ function onAnywhereLoad(twitter){
   myTwitter.hovercards(); //Twitter IDをみつけると、ユーザ情報を表示する
 
   /*関数呼び出し*/
- // showFollow();
-  myTwitter.('#follow-buttom').followButton('yosilove');
+ // myTwitter.('#follow-buttom').followButton('yosilove');
 
   window.alert("end follow:"+my_twitter_id);
 }
