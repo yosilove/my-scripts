@@ -31,7 +31,10 @@ function onAnywhereLoad(twitter){
 
   /*関数呼び出し*/
 	//window.alert("警告ダイアログの使用例です:"+my_twitter_id);
-  self.showFollow();
+ // showFollow();
+  myTwitter.('#follow-buttom').followButton("twitterapi");
+
+  window.alert("end follow:"+my_twitter_id);
 }
 
 
