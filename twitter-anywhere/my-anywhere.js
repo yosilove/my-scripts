@@ -14,19 +14,6 @@ http://wpxtreme.jp/how-to-use-twitter-at-anywhere-with-wordpress
 // @Anywhere を初期化。初期化完了後は onAnywhereLoad をコールバック！
 twttr.anywhere(onAnywhereLoad /*, ウインドウコンテキストも指定可能 */);
 
-/*
-function showFollowButtom(){
-	myTwitter('#follow-buttom').followButton(my_twitter_id);
-}
-
-function showTweetBox(){
-  myTwitter('#twit-box').tweetBox({
-      height: 100,
-      width: 150,
-      defaultContent: "<YOUR DEFAULT TWEETBOX CONTENT HERE>"
-    });
-}
-*/
 
 // @Anywhere 初期化コールバック。オレ達専用の初期化はここで行う。
 function onAnywhereLoad(twitter){
@@ -46,8 +33,22 @@ function onAnywhereLoad(twitter){
   twitter('#twit-box').tweetBox({
     height: 100,
     width: 150,
-    defaultContent: "<YOUR DEFAULT TWEETBOX CONTENT HERE>"
+    label: 'つぃーと',
+    defaultContent: "ツィートしてね！"
   });
+
+  var currentUser,screenName,profileImage,profileImageTag;
+  if (twitter.isConnected()) {
+    currentUser = twitter.currentUser;
+    screenName = currentUser.data('screen_name');
+    profileImage = currentUser.data('profile_image_url');
+    profileImageTag = "<img src='" + profileImage + "'/>";
+    var element=document.getElementById("twitter-connect");
+    var textNode = document.createTextNode("Logged in as " + profileImageTag + " " + screenName);
+    element.appendChild(textNode);
+  } else {
+    twitter("#twitter-connect").connectButton();
+  };
 
 }
 
