@@ -16,6 +16,7 @@ twttr.anywhere(onAnywhereLoad /*, ウインドウコンテキストも指定可�
 
 /*followボタンの表示*/
 function showFollow(){
+	document.write("test test");
   myTwitter.('#follow-buttom').followButton("twitterapi");
 }
 
@@ -27,7 +28,7 @@ function onAnywhereLoad(twitter){
   myTwitter.hovercards(); //Twitter IDをみつけると、ユーザ情報を表示する
 
   /*関数呼び出し*/
-  showFollow();
+  self.showFollow();
 }
 
 
