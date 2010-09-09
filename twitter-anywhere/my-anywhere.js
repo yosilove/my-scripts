@@ -30,6 +30,7 @@ function onAnywhereLoad(twitter){
   myTwitter.hovercards(); //Twitter IDをみつけると、ユーザ情報を表示する
 
   /*関数呼び出し*/
+	window.alert("警告ダイアログの使用例です:"+my_twitter_id);
   //self.showFollow();
 }
 
