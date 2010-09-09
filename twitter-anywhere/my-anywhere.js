@@ -14,18 +14,12 @@ var myTwitter; // Twitter オブジェクト用変数。
 // @Anywhere を初期化。初期化完了後は onAnywhereLoad をコールバック！
 twttr.anywhere(onAnywhereLoad /*, ウインドウコンテキストも指定可能 */);
 
-/*followボタンの表示*/
-
-function showFollow(){
-  window.alert("follow:"+my_twitter_id);
-  myTwitter.('#follow-buttom').followButton("twitterapi");
-}
-
 
 // @Anywhere 初期化コールバック。オレ達専用の初期化はここで行う。
 function onAnywhereLoad(twitter){
   /*初期設定*/
   myTwitter = twitter; // オレ達用に @Anywhere から授けられた Twitter オブジェクトを保存しておく。
+
   myTwitter.linkifyUsers();
   myTwitter.hovercards(); //Twitter IDをみつけると、ユーザ情報を表示する
 
