@@ -21,8 +21,6 @@ function onAnywhereLoad(twitter){
   myTwitter.linkifyUsers();
   myTwitter.hovercards(); //Twitter IDをみつけると、ユーザ情報を表示する
 
-	document.write(test);
-
   /*関数呼び出し*/
 }
 
