@@ -36,9 +36,8 @@ function onAnywhereLoad(twitter){
 
   /*関数呼び出し*/
   //myTwitter('#follow-buttom').followButton('yosilove');
-
-  showFolloeButtom();
-  showTweetBox();
+  self.showFolloeButtom();
+  self.showTweetBox();
 
 }
 
