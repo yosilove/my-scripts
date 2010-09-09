@@ -37,14 +37,15 @@ function onAnywhereLoad(twitter){
     defaultContent: "ツィートしてね！"
   });
 
-  var currentUser,screenName,profileImage,profileImageTag;
-  if (twitter.isConnected()) {
-    currentUser = twitter.currentUser;
-    screenName = currentUser.data('screen_name');
-    profileImage = currentUser.data('profile_image_url');
-    profileImageTag = "<img src='" + profileImage + "'/>";
+  if (twitter.currentUser) {
+    var currentUser = twitter.currentUser;
+    var screenName = currentUser.attributes.screen_name;
+    var profileImage = currentUser.attributes.profile_image_url;
+    var elemImg = document.createElement('img')
+    elemImg.src = profileImage;
     var element=document.getElementById("twitter-connect");
-    var textNode = document.createTextNode("Logged in as " + profileImageTag + " " + screenName);
+    var textNode = document.createTextNode("Logged in as " + screenName);
+    element.appendChild(elemImg);
     element.appendChild(textNode);
   } else {
     twitter("#twitter-connect").connectButton();
