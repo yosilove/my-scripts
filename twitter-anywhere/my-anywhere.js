@@ -55,10 +55,16 @@ function onAnywhereLoad(twitter){
 	//検索結果の表示
 	var encodedQuery = encodeURI(twitter_query);
   var statuses = twitter.search(encodedQuery);
-
   var elemBox = document.getElementById("status-box");
 
-  window.alert(statuses);
+  var elemList = document.createElement('ul')
+
+  for (var tweet in statuses){
+    var elemItem = document.createElement('li')
+    elemItem.appendChild(document.createTextNode(tweet.text));
+    elemList.appendChild(elemItem);
+  }
+  elemBox.appendChild(elemList);
 }
 
 
