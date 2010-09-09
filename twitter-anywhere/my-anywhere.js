@@ -37,6 +37,7 @@ function onAnywhereLoad(twitter){
     defaultContent: "ツィートしてね！"
   });
 
+  //現在ログインしているユーザの情報の表示
   if (twitter.currentUser) {
     var currentUser = twitter.currentUser;
     var screenName = currentUser.attributes.screen_name;
@@ -51,6 +52,13 @@ function onAnywhereLoad(twitter){
     twitter("#twitter-connect").connectButton();
   };
 
+	//検索結果の表示
+	var encodedQuery = encodeURI(twitter_query);
+  var statuses = twitter.search(encodedQuery);
+
+  var elemBox = document.getElementById("status-box");
+
+  window.alert(statuses);
 }
 
 
