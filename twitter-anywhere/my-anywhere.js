@@ -19,9 +19,9 @@ function showFollowButtom(){
 }
 
 function showTweetBox(){
-  myTwitter('#tweet-box').tweetBox({
+  myTwitter('#twit-box').tweetBox({
       height: 100,
-      width: 40,
+      width: 150,
       defaultContent: "<YOUR DEFAULT TWEETBOX CONTENT HERE>"
     });
 }
