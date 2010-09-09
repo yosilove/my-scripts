@@ -15,12 +15,12 @@ var myTwitter; // Twitter オブジェクト用変数。
 twttr.anywhere(onAnywhereLoad /*, ウインドウコンテキストも指定可能 */);
 
 /*followボタンの表示*/
-/*
+
 function showFollow(){
-	document.write("test test");
+  window.alert("follow:"+my_twitter_id);
   myTwitter.('#follow-buttom').followButton("twitterapi");
 }
-*/
+
 
 // @Anywhere 初期化コールバック。オレ達専用の初期化はここで行う。
 function onAnywhereLoad(twitter){
@@ -30,8 +30,8 @@ function onAnywhereLoad(twitter){
   myTwitter.hovercards(); //Twitter IDをみつけると、ユーザ情報を表示する
 
   /*関数呼び出し*/
-	window.alert("警告ダイアログの使用例です:"+my_twitter_id);
-  //self.showFollow();
+	//window.alert("警告ダイアログの使用例です:"+my_twitter_id);
+  self.showFollow();
 }
 
 
