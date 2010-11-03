@@ -6,12 +6,12 @@
 </head>
 <body>
 
-「pre class="code"」でくくると行番号をつけます
+「pre class="code"」でくくると行番号をつけます<br>
 <pre class="code" id="test.c">
-test
+test.c source code
 </pre>
 
-preタグ内に書かれているものをそのまま使うので、HTMLタグも使えます。
+preタグ内に書かれているものをそのまま使うので、HTMLタグも使えます。<br>
 <pre class="code" id="tagdelete">
 <span style="color:#000099;">function</span> tag_delete(html){
   rgexp = <span style="color:#000099;">new</span> RegExp(/&lt;(<span style="color:#009900;">&quot;[^&quot;</span>]*<span style="color:#009900;">&quot;|'[^']*'|[^'&quot;</span>&gt;])*&gt;/g);
@@ -25,14 +25,18 @@ test
 test
 </pre>
 
-ソースコードをダブルクリックすると新規ウィンドウで開きます。
-そのときのWindow名はpreタグのidを使います。
-行番号は表示されず、HTMLタグも削除されます。
+ソースコードをダブルクリックすると新規ウィンドウで開きます。<br>
+そのときのWindow名はpreタグのidを使います。<br>
+行番号は表示されず、HTMLタグも削除されます。<br>
 <pre class="code" id="test file">
 if you double cliked here
 
 create a new window with this message
 </pre>
+
+
+「a href="#test.c1"」でidを「test.c」にしたpreタグの1行目にリンクできます<br>
+<a href="#test.c1">test の1行目にリンク</a>
 
 <!--<button onclick="execute()">サンプル実行</button>-->
 
