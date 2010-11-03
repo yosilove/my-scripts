@@ -1,0 +1,40 @@
+<html>
+<head>
+
+<script type="text/javascript" src="pre2code.js"></script>
+
+</head>
+<body>
+
+「pre class="code"」でくくると行番号をつけます
+<pre class="code" id="test.c">
+test
+</pre>
+
+preタグ内に書かれているものをそのまま使うので、HTMLタグも使えます。
+<pre class="code" id="tagdelete">
+<span style="color:#000099;">function</span> tag_delete(html){
+  rgexp = <span style="color:#000099;">new</span> RegExp(/&lt;(<span style="color:#009900;">&quot;[^&quot;</span>]*<span style="color:#009900;">&quot;|'[^']*'|[^'&quot;</span>&gt;])*&gt;/g);
+ plain = html.replace(rgexp, <span style="color:#009900;">&quot;&quot;</span>);
+ <span style="color:#000099;">return</span> plain;
+}
+
+test
+  test
+	test
+test
+</pre>
+
+ソースコードをダブルクリックすると新規ウィンドウで開きます。
+そのときのWindow名はpreタグのidを使います。
+行番号は表示されず、HTMLタグも削除されます。
+<pre class="code" id="test file">
+if you double cliked here
+
+create a new window with this message
+</pre>
+
+<!--<button onclick="execute()">サンプル実行</button>-->
+
+</body>
+</html>
