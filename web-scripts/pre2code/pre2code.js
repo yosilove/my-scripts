@@ -42,7 +42,7 @@ function addLineNum(source,aid){
   var newSource = "<code class\"srcFile\"><ol class=\"srcCode\">\n";
   for (n = 0; n < lines.length; n++) {
     //行番号へのリンク用のaタグを準備
-    var aTag = "<a id=\""+ aid + (n+1) + "\">"
+	var aTag = "<a id=\""+ aid + (n+1) + "\"></a>"
     newSource = newSource + aTag + "<li class=\"lineNum\">" + lines[n] +"</li>"; 
   }
   newSource = newSource + "</ol></code>"
