@@ -6,9 +6,9 @@ mathタグのeq属性にtex形式で指定した数式を表示
  作者:yosilove
  作成:2010/11/07
 */
+window.addEventListener("load", mathtag_exec, false);
+
 var google_chart_url = 'http://chart.apis.google.com/chart'
-
-
 //=======================
 //　補助用の関数
 //=======================
@@ -48,7 +48,8 @@ function texsupport(tex){
 //  Mainの関数
 //=======================
 
-window.onload = function tex2math_exec(){
+//window.onload = 
+function mathtag_exec(){
   //preタグを検索 
   for (i = 0; i < document.all.tags("math").length; i++) {
     var mathTag = document.all.tags("math")(i);
