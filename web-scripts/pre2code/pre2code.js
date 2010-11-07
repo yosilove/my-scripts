@@ -7,6 +7,8 @@
  作者:yosilove
  作成:2010/11/03
 */
+window.addEventListener("load", pre2code_exec, false);
+
 
 //=======================
 //　補助用の関数
@@ -75,8 +77,7 @@ function openByNewWindow()
 //=======================
 //  Mainの関数
 //=======================
-
-window.onload = function pre2code_exec(){
+function pre2code_exec(){
   //preタグを検索 
   for (i = 0; i < document.all.tags("pre").length; i++) {
     var preTag = document.all.tags("pre")(i);

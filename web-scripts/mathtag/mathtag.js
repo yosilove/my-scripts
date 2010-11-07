@@ -48,7 +48,6 @@ function texsupport(tex){
 //  Mainの関数
 //=======================
 
-//window.onload = 
 function mathtag_exec(){
   //preタグを検索 
   for (i = 0; i < document.all.tags("math").length; i++) {
