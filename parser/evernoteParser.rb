@@ -1,4 +1,6 @@
 #Evernoteのバックアップファイル（.enex）をHashに格納するスクリプト
+#試しに作り中
+# gitに登録されるのか？
 
 require 'kconv'
 require "rexml/document"
@@ -10,6 +12,7 @@ File.open("mynote.enex") {|fp|
 
 book = Array.new
 
+#ノートごとに処理
 doc.elements.each("en-export/note") { |note|
 	page = Hash.new
 
