@@ -13,6 +13,7 @@ File.open("mynote.enex") {|fp|
 book = Array.new
 
 #ノートごとに処理
+#エレメントを読み込む
 doc.elements.each("en-export/note") { |note|
 	page = Hash.new
 
